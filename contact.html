@@ -11,6 +11,7 @@
     </head>
     <body>
         <nav>
+            <h1 id="brand"></h1>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -22,29 +23,38 @@
         </header>
 
         <div class="forms">
+
             <p id="contactme">Thank you for visiting my portfolio page! If you have any questions or just want to
                 get in touch, feel free to email me using the contact form below!
             </p>
+
             <div class="emailform">
-                <form action="mailto:aendres19@gmail.com" method="post">
-                    Name:
-                    </br>
-                    <input type="text" name="vistorname">
-                    </br>
-                    Email:
-                    </br>
-                    <input type="text" name="visitoremail">
-                    </br>
-                    Comments/Questions:
-                    </br>
-                    <textarea name="visitorcomment" cols="21" rows="5">
+                <form name="contactMe" action="mailto:aendres19@gmail.com" method="post" onsubmit="return validateForm()">
+                        <p><em>Name:</em></p>
+                        <input id="Name" type="text" name="Name" required />
+                        <p><em>Email:</em></p>
+                        <input id ="Mail" type="text" name="Email" required />
+                        <p><em>Comments/Questions:</em></p>
+                        <textarea name="visitorcomment" cols="21" rows="5">
                         Your message here...
-                    </textarea>
-                    </br>
-                    <input type="submit" id="submit" value=submit>
+                        </textarea>
+                        </br>
+                        <input id="submit" type="submit" name="submit" value="Submit">
+                </form>
+            </div>
+
+            <div class="funButton">
+                <form>
+                    <p><em id="exciting">Type something and I'll make it exciting:</em></p>
+                    <input type="text" id="userInput">
+                    <input id="submit" type ="button" value="Click Here" onclick="myFunction()">
+                    <input type="text" id="myOutput">
                 </form>
             </div>
 
         </div>
+
+        <script src="main.js"></script>
+
     </body>
 </html>
